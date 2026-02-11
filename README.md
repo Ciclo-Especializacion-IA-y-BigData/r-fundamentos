@@ -101,12 +101,99 @@ Las entregas se realizan **exclusivamente mediante Pull Request**.
 
 ### Pasos resumidos
 
-1. Clona el repositorio
-2. Crea una rama nueva para tu entrega
-3. Crea tu carpeta en `entregas/<apellidos_nombre>/`
-4. Añade el notebook resuelto (`Notebook_01.ipynb`, `Notebook_02.ipynb`, etc.) y archivos necesarios (imágenes, datasets...)
-5. Haz commit y push
-6. Abre un Pull Request hacia `main`
+Perfecto 👍 Te lo integro dentro del procedimiento completo, adaptado al flujo que quieres que sigan los alumnos.
+
+---
+
+# 📌 Procedimiento para entregar una práctica mediante Pull Request
+
+
+# 🔧 Procedimiento completo con comandos
+
+## 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/carlostessier/r-fundamentos.git
+cd repositorio
+```
+
+---
+
+## 2️⃣ Crear una nueva rama para la entrega
+
+⚠️ No trabajar directamente en `main`.
+
+```bash
+git checkout -b entrega/apellidos_nombre
+```
+
+---
+
+## 3️⃣ Crear la carpeta de entrega
+
+```bash
+mkdir -p entregas/apellidos_nombre
+```
+
+Coloca dentro:
+
+* `Notebook_01.ipynb` (o el que corresponda)
+* Imágenes
+* Datasets necesarios
+* Cualquier archivo adicional requerido
+
+---
+
+## 4️⃣ Añadir los archivos al control de versiones
+
+```bash
+git add entregas/apellidos_nombre/
+```
+
+---
+
+## 5️⃣ Hacer commit
+
+```bash
+git commit -m "Entrega Notebook 01 - Apellidos Nombre"
+```
+
+---
+
+## 6️⃣ Subir la rama al repositorio remoto
+
+```bash
+git push -u origin entrega/apellidos_nombre
+```
+
+---
+
+## 7️⃣ Crear el Pull Request
+
+Desde la web del repositorio (GitHub/GitLab), crear un PR:
+
+* **Base:** `main`
+* **Compare:** `entrega/apellidos_nombre`
+
+O si usas GitHub CLI:
+
+```bash
+gh pr create --base main --head entrega/apellidos_nombre --fill
+```
+
+---
+
+# 🎯 Buenas prácticas
+
+* No subir datasets muy pesados si no es necesario.
+* Comprobar que el notebook ejecuta sin errores antes del commit.
+* No modificar archivos de otros compañeros.
+* No trabajar nunca directamente sobre `main`.
+
+---
+
+Si quieres, puedo prepararte una versión lista para copiar y pegar en el README del repositorio para los alumnos.
+
 
 ### Reglas de entrega
 
